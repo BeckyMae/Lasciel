@@ -1,0 +1,618 @@
+
+@font-face {
+	font-family: 'Amatic SC', cursive;
+	src: url("fonts.googleapis.com/css?family=Amatic+SC"); /*reading font*/
+	src: url("fonts.googleapis.com/css?family=Indie+Flower|Open+Sans"); /*dialog font*/
+	font-family: 'Indie Flower', cursive;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+@media (min-width: 400px) { 
+
+	#avatar{
+		width: 80%;
+		margin-right: 10%;
+		margin-left: 10%;
+	}
+
+
+}
+
+@media (min-width: 520px) {
+
+	body {
+		display: flex;
+		height: 100%;
+	}
+
+	.cardBox, .card, .cardF, .cardB {
+		max-width: 50%;
+	}
+
+	#gypsyW {
+		max-width: 50%;
+		min-width: 50%;
+		min-height: 100%;
+	}
+	
+	.fDialog {
+		font-size: 140%;
+	}
+	
+	#tarot {
+		min-height: 45%;
+	}
+	
+	.dialog {
+		min-height: 50% !important;
+		max-height: 50% !important;
+		margin-left: -1%;
+	}
+	
+	.dialog>p {
+		font-size: 150%;
+		padding: 20%;
+	}
+	
+	.zodiac {
+		width: 50%;	
+		min-height: 100%;
+	}
+	
+	#zodiacB {
+		position: relative;
+		top: 0px;
+		width: 0%;
+		height: 95%;
+		display: flex;
+		background-image: url('../images/zodiacB.jpg');
+		background-size: 100% 100%;
+	}
+	
+	#board {
+		max-width: 50%;	
+		min-height: 100%;
+	}
+
+	#choice {
+		min-height: 100%;
+		background-size: 100% 115%;
+		padding-bottom: 0% !important;
+		justify-content: center;
+	}
+
+	#choice1, #choice2, #choice3 {
+		margin-bottom: 1% !important;
+	}
+
+	
+	.avatarBox {
+		min-width: 70%;
+	}
+
+	.zButton>p {
+		font-family: 'Indie Flower', cursive;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0 auto;
+		font-size: 120%;
+	}
+	
+	.answerImg {
+		min-width: 100%;
+	}
+
+	
+	#hand {
+		max-width: 100%;
+		min-width: 100%;
+		position: relative;
+		justify-content: : center;
+		align-items: center;
+	}
+	
+	.cardBox {
+		max-height: 30%;
+	}
+	
+	.card, .cardF, .cardB {
+		min-width: 100%;
+		margin-top: 0%;
+	}
+	
+	#bigCard {
+		min-height: 80%;
+	}
+
+	#bigCardW {
+		height: 90%;
+		padding: 0% !important;
+	}
+	
+}
+
+
+@media (min-width: 850px) { 
+	
+	.fDialog {
+		font-size: 140%;
+	}
+	
+	#tarot {
+		min-height: 45%;
+	}
+	
+	.dialog {
+		min-height: 50%;
+		margin-left: -1%;
+		font-size: 150%;
+	}
+	
+	.dialog>p {
+		font-size: 150%;
+	}
+	
+	.zodiac {
+		width: 50%;	
+		min-height: 100%;
+	}
+
+	.zButton>p {
+		font-size: 170% !important;
+	}
+
+	#zodiacB {
+		display: flex;
+		background-size: 100% 100%;
+	}
+	
+	.avatarBox {
+		min-width: 60%;
+	}
+
+	.zButton>p {
+		font-size: 180%;
+	}
+	
+	.answerImg {
+		min-width: 100%;
+	}
+
+	.cardBox {
+		max-height: 50%;
+		margin: 1%;
+	}
+	
+	#bigCard {
+		min-height: 80%;
+		max-width: 40%;
+	}
+
+	#bigCardW {
+		margin: 0% !important;
+		padding: 0% !important;
+	}
+
+	#goBackImg {
+			height: 15%;
+			width: 10% !important;
+		}
+
+	} /* End of min-width: 850px */
+
+	@media (min-width: 1200px) { 
+
+		.avatarBox {
+			min-width: 40%;
+		}
+
+		.dialog>p {
+			font-size: 170%;
+		}
+
+		.zButton>p {
+			font-size: 230% !important;
+		}
+
+		.cardBox {
+			max-height: 70%;
+			margin: 1%;
+		}
+
+		#zodiacB {
+			height: 100%;
+		}
+
+		#bigCard {
+			min-height: 80%;
+			max-width: 25%;
+		}
+
+		#cardBB, #cardBF {
+			margin: 0%;
+			padding: 0%;
+		}
+
+		#goBackImg {
+
+		}
+
+		#clickM {
+			height: 15%;
+		}
+
+		#clickMImg {
+			height: 100% !important;
+			width: 25% !important;
+		}
+
+
+		
+
+
+		} /* End of min-width: 1000px */
+
+
+		body {
+			background-color: black;
+			padding: 0px;
+			margin: 0px;
+			overflow:hidden;
+		}
+
+		#gypsyW{
+			padding: 0px;
+			margin: 0px;
+		}
+
+		#tarot{
+			height: 40%;
+			width: 100%;
+			display: flex;
+			-webkit-transition: background-image 1.5s ease-out;
+			-moz-transition: background-image 1.5s ease-out;
+			-o-transition: background-image 1.5s ease-out;
+			-ms-transition: background-image 1.5s ease-out;
+			transition: background-image 1.5s ease-out;
+			background-image: url('../images/tarotB.png');
+			background-size: cover;
+		}
+
+		.answer {
+			display: flex;
+			width: 25%;
+			color: white;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.avatarBox, .avatar, .avatarF, .avatarB {
+			height: 100%;
+			width: 100%;
+		}
+
+		.avatarBox {
+			width: 45%;
+			text-align: center;
+			position: relative;
+		}
+
+		.avatar {
+			width: 100%;
+			transition: all 1.5s ease;
+			transform-style: preserve-3d;
+			perspective: 700;
+		}
+
+		.avatarImg, .avatarF, .avatarB {
+			-moz-backface-visibility: hidden;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.avatarImg {
+			width: 100%;
+			height: 100%;
+			transform: scaleX(-1);
+		}
+
+		.avatarF {
+			z-index: 2;
+			transform: rotateY(0deg);
+		}
+
+		.answerImg {
+			width: 80%;
+			display: none;
+			cursor: pointer;
+		}
+
+		.history {
+			display: none;
+			z-index: 2;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+
+		#history {
+			width: 40%;
+			cursor: pointer;
+		}
+
+		.dialog {
+			display: flex;
+			width: 100%;
+			height: 13%;
+			background: grey;
+			justify-content: center;
+			align-items: center;
+			background-image: url('../images/dialogB.jpg');
+			background-size: 100% 100%;
+			padding:10px;
+			-webkit-transition: height .5s ease-in;
+			-moz-transition: height .5s ease-in;
+			-o-transition: height .5s ease-in;
+			-ms-transition: height .5s ease-in;
+			transition: height .5s ease-in;
+			font-family: 'Indie Flower', cursive;
+			font-size:125%;
+			text-align: center;
+		}
+
+		.dialog>p {
+			margin: 2%;
+			padding: 5%;
+			padding-right: 7%;
+		}
+
+
+		.zodiac {
+			background-color: black;
+			display: flex-inline;
+			width: 100%;
+			height: 43%;
+			justify-content: center;
+			align-items: center;
+			margin-top: 1%;
+		}
+		
+
+		.zBox {
+			height: 24%;
+			width: 100%;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			text-align: center;
+			background-color: black;
+		}
+
+		.zButton {
+			border-radius: 10px;
+			height: 100%;
+			width: 34%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+
+		.zButton>p {
+			font-family: 'Indie Flower', cursive;
+			font-size: 105%;
+		}
+
+
+		#z01 {
+			background-image: url('../images/aquarius.jpg');
+		}
+
+		#z02 {
+			background-image: url('../images/pisces.jpg');
+		}
+
+		#z03 {
+			background-image: url('../images/aries.jpg');
+		}
+
+		#z04 {
+			background-image: url('../images/taurus.jpg');
+		}
+
+		#z05 {
+			background-image: url('../images/gemini.jpg');
+		}
+
+		#z06 {
+			background-image: url('../images/cancer.jpg');
+		}
+
+		#z07 {
+			background-image: url('../images/leo.jpg');
+		}
+
+		#z08 {
+			background-image: url('../images/virgo.jpg');
+		}
+
+		#z09 {
+			background-image: url('../images/libra.jpg');
+		}
+
+		#z10 {
+			background-image: url('../images/scorpio.jpg');
+		}
+
+		#z11 {
+			background-image: url('../images/sagittarius.jpg');
+		}
+
+		#z12 {
+			background-image: url('../images/capricorn.jpg');
+		}
+
+		#choice {
+			display: none;
+			width: 100%;
+			height: 37%;
+			justify-content: center;
+			align-items: center;
+			background-size: 100% 100%;
+			background-image: url('../images/board.jpg');
+		}
+
+		#board {
+			display: none; /*Toggle between none and inline*/
+			width: 100%;
+			height: 37%;
+			justify-content: center;
+			align-items: center;
+			background-image: url('../images/board.jpg');
+			background-size: 100% 100%;;
+		}
+
+		#hand {
+			display: flex;
+			height: 100%;
+			width: 100%;
+			justify-content: center;
+			padding-bottom: 6%;
+		}
+
+		.cardBox, .card, .cardF, .cardB {
+			border-radius: 15px;
+			height: 80%;
+		}
+
+		.card, .cardF, .cardB {
+			width: 100%;
+			margin: auto;
+			margin-top: 5%;
+		}
+
+		.choiceTitle {
+			color: white;
+			font-size: 150%;
+			position: absolute;
+		}
+
+		.cardBox {
+			width: 30%;
+			height: 90%;
+			margin: 1%;
+			position: relative;
+			transition: all 1.5s ease;
+			transform-style: preserve-3d;
+			perspective: 700;
+			justify-content: : center;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.cardImg, .cardF, .cardB {
+			-moz-backface-visibility: hidden;
+			position: absolute;
+		}
+
+		.cardF {
+			backface-visibility: hidden;
+			z-index: 2;
+			transform: rotateY(0deg);
+		}
+
+		#card1B, #card2B, #card3B {
+
+			transform: scale(1, 1);
+			position: absolute;
+		}
+
+		.cardImg {
+			transform: scaleX(-1);
+			width: 100%;
+			height: 120%;
+			border-radius: 15px;
+			background-color: black;
+		}
+
+		#bigCard {
+			display: none;
+			position: absolute;
+			top: 0;
+			width: 75%;
+			height: 85%;
+			margin: 0 auto;
+		}
+
+		#cardBB {
+			position: absolute;
+
+		}
+
+		#cardBF, #choice1F, #choice2F, #choice3F {
+			transform: scale(1, 1);
+		}
+
+		#choice1, #choice2, #choice3 {
+			margin-bottom: 10%;
+		}
+
+		#cardBB, #cardBF {
+			margin-top: 10%;
+		}
+
+		#goBackImg {
+			position: absolute;
+			top: 0; left: 0; right:0;
+			z-index: 2;
+			height: 15%;
+			width: 25%;
+			display: none;
+			margin: 0 auto;
+			cursor: pointer; 
+		}
+
+		#cardDes {
+			display: block;
+			position: absolute;
+			text-align: center;
+			transform:rotateY(180deg);
+			margin: 15%;
+			margin-top: 20%;
+			z-index: 2;
+			font-size: 110%;
+			opacity: 0;
+			cursor: pointer;
+			transition: opacity .5s ease-in;
+			-moz-transition: opacity .5s ease-in;
+			-webkit-transition: opacity .5s ease-in;
+			overflow: scroll;
+			font-family: 'Indie Flower', cursive;
+			font-size: 120%;
+			min-height: 100%;
+			max-height: 100%;
+			overflow-x: hidden;
+		}
+
+		#clickM {
+			position: absolute;
+			bottom: 0;
+			margin: 0px;
+			padding: 0px;
+			height: 6%;
+			width: 100%;
+			text-align: center;
+			display: none;
+		}
+
+		#clickMImg {
+			height: 100%;
+			margin: 0px;
+			padding: 0px;
+		}
+
+

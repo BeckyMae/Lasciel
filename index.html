@@ -1,0 +1,207 @@
+<!DOCTYPE <html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59142155-6"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-59142155-6');
+	</script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> <!-- reading font -->
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans" rel="stylesheet">
+	<title>Tarot Card Game</title>
+	<script type="text/javascript" src="scripts/jquery-3.2.1.min.js"> </script>
+	<script type="text/javascript" src="scripts/tarot.js"> </script>
+
+</head>
+
+<body>
+	<div id="gypsyW">
+		<div class="tarot" id="tarot">
+
+			<div class="answer"><img class="answerImg" id="pYes" onclick="pSelectY()" src="images/yes.png" alt="yes"></div>
+
+			<div class="avatarBox" id="gypsy">
+				
+
+				<div class="avatar" id="avatar">
+					<div class="avatarF">
+						<img class="avatarImg" id="avatarF" src="images/gypsy.jpg" alt="gypsy">
+					</div>	
+					
+					<div class="avatarB">
+						<img class="avatarImg" id="avatarB" src="images/gypsy.jpg" alt="gypsy">	
+					</div>	
+					
+					<div class="history"><img id="history" onclick="historyG()" src="images/history.png" alt="no"></div>	
+					
+				</div>
+				
+			</div>
+
+			<div class="answer"><img class="answerImg" id="pNo" onclick="pSelectN()" src="images/no.png" alt="no"></div>						
+		</div>	
+
+		<div class="dialog" id="dialog">
+			<p> Welcome to<br>Xander's Tarot Card Game<br>Please choose a Zodiac </p>	
+		</div>
+	</div>
+
+
+	<div class="zodiac"><!--will be replaced by #board-->
+		<div class="zBox"><!--holds zodiacs 1 2 3-->
+			<div class="zButton" id="z01" onclick="z1()">
+				<p>AQUARIUS</p>
+			</div>
+			<div class="zButton" id="z02" onclick="z2()">
+				<p>PISCES</p>
+			</div>
+			<div class="zButton" id="z03" onclick="z3()">
+				<p>ARIES</p>
+			</div>
+		</div>
+
+		<div class="zBox"><!--holds zodiacs 4 5 6-->
+			<div class="zButton" id="z04" onclick="z4()">
+				<p>TAURUS</p>
+			</div>
+			<div class="zButton" id="z05" onclick="z5()">
+				<p>GEMINI</p>
+			</div>
+			<div class="zButton" id="z06" onclick="z6()">
+				<p>CANCER</p>
+			</div>
+
+		</div><!--end of zodiacs 4 5 6-->
+
+
+		<div class="zBox"><!--holds zodiacs 7 8 9-->
+			<div class="zButton" id="z07" onclick="z7()">
+				<p>LEO</p>
+			</div>
+			<div class="zButton" id="z08" onclick="z8()">
+				<p>VIRGO</p>
+			</div>
+			<div class="zButton" id="z09" onclick="z9()">
+				<p>LIBRA</p>
+			</div>
+
+		</div><!--end of zodiacs 7 8 9-->
+
+
+		<div class="zBox"><!--holds zodiacs 10 11 12-->
+			<div class="zButton" id="z10" onclick="z10()">
+				<p>SCORPIO</p>
+			</div>
+			<div class="zButton" id="z11" onclick="z11()">
+				<p>SAGITTARIUS</p>
+			</div>
+			<div class="zButton" id="z12" onclick="z12()">
+				<p>CAPRICORN</p>
+			</div>
+
+		</div><!--end of zodiacs 10 11 12-->
+		
+		
+
+
+	</div><!--end of zodiac-->
+	
+	<div id="zodiacB"></div>
+
+	<div id="choice">
+		<div class="cardBox" id="choice1">
+			<div class="card">
+				<div class="cardF">
+					<img class="cardImg" id="choice1F" src="images/love.jpg" alt="choice1">
+				</div>
+				<div class="cardB">
+					<img class="cardImg" id="choice1B" src="images/card_coverDark.jpg" alt="card_coverDark">
+				</div>
+			</div>
+		</div>
+
+		<div class="cardBox" id="choice2">
+			<div class="card">
+				<div class="cardF">
+					<img class="cardImg" id="choice2F" src="images/wealth.jpg" alt="choice2">
+				</div>
+				<div class="cardB">
+					<img class="cardImg" id="choice2B" src="images/card_coverDark.jpg" alt="card_coverDark">
+				</div>
+			</div>
+
+		</div>
+
+		<div class="cardBox" id="choice3">
+			<div class="card">
+				<div class="cardF">
+					<img class="cardImg" id="choice3F" src="images/spirit.jpg" alt="choice3">
+				</div>
+				<div class="cardB">
+					<img class="cardImg" id="choice3B" src="images/card_coverDark.jpg" alt="card_coverDark">
+				</div>	
+			</div>	
+		</div>
+
+	</div> <!-- end of choice -->
+
+	<div id="board">
+
+		<div id="hand">			
+			<div class="cardBox" id="card1w">
+				<div class="card" id="card1">
+					<div class="cardF">
+						<img class="cardImg" id="card1B" src="images/card_cover.jpg" alt="card1">
+					</div>
+					<div class="cardB">
+						<img class="cardImg" id="card1F" src="images/card_cover.jpg" alt="card1">
+					</div>
+				</div>
+			</div>
+			<div class="cardBox" id="card2w">
+				<div class="card" id="card2">
+					<div class="cardF">
+						<img class="cardImg" id="card2B" src="images/card_coverDark.jpg" alt="card2">
+					</div>
+					<div class="cardB">
+						<img class="cardImg" id="card2F" src="images/card_cover.jpg" alt="card2">
+					</div>
+				</div>
+			</div>
+			<div class="cardBox" id="card3w">
+				<div class="card" id="card3">
+					<div class="cardF">
+						<img class="cardImg" id="card3B" src="images/card_coverDark.jpg" alt="card3">
+					</div>
+					<div class="cardB">
+						<img class="cardImg" id="card3F" src="images/card_cover.jpg" alt="card3">
+					</div>
+				</div>
+			</div>
+
+			<div class="cardBox" id="bigCard" onclick="flipCardBF()">
+				<div class="card" id="bigCardW">
+					<div class="cardF">
+						<img class="cardImg" id="cardBF" src="images/fool.png">
+					</div>
+					<div class="cardB" id="bigCardDes">
+						<div id="cardDes"> </div>
+						<img class="cardImg" id="cardBB" src="images/cardDes.jpg">
+					</div>
+				</div>
+			</div>
+		</div><!--end of hand-->
+	</div><!--end of board-->
+	<div id="goBack"> <img id="goBackImg" src="images/goBack.png"> </div>
+	<div id="clickM"> <img id="clickMImg" src="images/click.png"> </div>
+</body>
+</html>
