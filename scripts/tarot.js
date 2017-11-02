@@ -59,9 +59,9 @@
 		}
 
 		function resetDeck (){
-			$("#card1w").css("transform","rotateY(0deg)");
-			$("#card2w").css("transform","rotateY(0deg)");
-			$("#card3w").css("transform","rotateY(0deg)");
+			$("#card1").css("transform","rotateY(0deg)");
+			$("#card2").css("transform","rotateY(0deg)");
+			$("#card3").css("transform","rotateY(0deg)");
 			$("#card2B").attr("src","images/card_coverDark.jpg");
 			$("#card3B").attr("src","images/card_coverDark.jpg");
 			$("#clickM").css("display","none");
@@ -79,6 +79,7 @@
 			$("#choice2").css("transform","rotateY(0deg)");
 			$("#choice3").css("transform","rotateY(0deg)");
 			$("#zodiacB").css("width","0%");
+
 		}
 
 	
@@ -247,7 +248,7 @@
 			tempCard = pCard1;
 			$("#pYes").attr("src","images/backD.png");
 			$("#pNo").attr("src","images/next.png");	
-			$("#card1w").css("transform","rotateY(180deg)");
+			$("#card1").css("transform","rotateY(180deg)");
 			$("#dialog").html("<p>You have drawn<br>The " + tempCard.cName + "<br>" + tempCard.tlt + "</p>");
 			gypsyDialog.push("<p>You have drawn<br>The " + tempCard.cName + "<br>" + tempCard.tlt + "</p>");
 			$("#card1").attr("onclick","bigCard(pCard1)");
@@ -259,7 +260,7 @@
 		
 		function flipCard2() {
 			tempCard = pCard2;
-			$("#card2w").css("transform","rotateY(180deg)");
+			$("#card2").css("transform","rotateY(180deg)");
 			$("#dialog").html("<p>You have drawn<br>The " + tempCard.cName + "<br>" + tempCard.tlt + "</p>");
 			gypsyDialog.push("<p>You have drawn<br>The " + tempCard.cName + "<br>" + tempCard.tlt + "</p>");
 			$("#card2").attr("onclick","bigCard(pCard2)");
@@ -269,7 +270,7 @@
 
 		function flipCard3() {
 			tempCard = pCard3;
-			$("#card3w").css("transform","rotateY(180deg)");
+			$("#card3").css("transform","rotateY(180deg)");
 			$("#dialog").html("<p>You have drawn<br>The " + tempCard.cName + "<br>" + tempCard.tlt + "</p>");
 			gypsyDialog.push("<p>You have drawn<br>The " + tempCard.cName + "<br>" + tempCard.tlt + "</p>");
 			$("#card3").attr("onclick","bigCard(pCard3)");
@@ -297,7 +298,7 @@
 		}
 		
 		function flipHistoryF(bCard) {
-			$("#bigCard").css("transform","rotateY(180deg)");
+			$("#bigCardW").css("transform","rotateY(180deg)");
 			$("#bigCard").attr("onclick","flipHistoryB()");
 			$("#cardDes").css("opacity",100);
 			$("#cardDes").html(gypsyDialog.toString());
@@ -305,7 +306,7 @@
 		
 		function flipHistoryB() {
 			$("#cardDes").css("opacity",0);
-			$("#bigCard").css("transform","rotateY(0deg)");
+			$("#bigCardW").css("transform","rotateY(0deg)");
 			$("#bigCard").attr("onclick","flipHistoryF()");
 		}
 
@@ -329,7 +330,7 @@
 		}
 
 		function flipCardBF(bCard) {
-			$("#bigCard").css("transform","rotateY(180deg)");
+			$("#bigCardW").css("transform","rotateY(180deg)");
 			$("#bigCard").attr("onclick","flipCardBB()");
 			$("#cardDes").css("opacity",100);
 			$("#cardDes").html(tempCard.des);
@@ -337,7 +338,7 @@
 		
 		function flipCardBB() {
 			$("#cardDes").css("opacity",0);
-			$("#bigCard").css("transform","rotateY(0deg)");
+			$("#bigCardW").css("transform","rotateY(0deg)");
 			$("#bigCard").attr("onclick","flipCardBF()");
 		}
 
@@ -345,7 +346,7 @@
 			$("#cardDes").css("opacity",0);
 			$("#bigCard").css("display","none");
 			$("#goBackImg").css("display","none");
-			$("#bigCard").css("transform","rotateY(0deg)");
+			$("#bigCardW").css("transform","rotateY(0deg)");
 			$("#bigCard").attr("onclick","flipCardBF()");
 			$("#tarot").css("display","flex");
 			$("#dialog").css("display","flex");
