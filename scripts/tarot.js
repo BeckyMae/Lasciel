@@ -315,7 +315,7 @@
 			$("#goBack").attr("onclick","goBack()");
 			tempCard = bCard;
 			$("#cardDes").css("opacity",0);
-			$("#cardBF").attr("src", tempCard.img);
+			$("#cardBF").attr("src", "tempCard.img");
 			$("#bigCard").css("display","block");
 			$("#goBackImg").css("display","block");
 			$("#tarot").css("display","none");
